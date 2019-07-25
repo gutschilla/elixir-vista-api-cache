@@ -1,5 +1,7 @@
 # VistaStorage
 
+[![CircleCI](https://circleci.com/gh/gutschilla/elixir-vista-api-cache.svg?style=svg)](https://circleci.com/gh/gutschilla/elixir-vista-api-cache)
+
 Responsible for keeping track of sessiosn, cinemas and films. Will take care of
 loading, expiring and via adjusted polling frequencies - the nearer an event,
 the higher the frequency.
