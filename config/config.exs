@@ -22,8 +22,9 @@ config :vista_storage,
 
 config :vista_storage, VistaStorage.Scheduler,
   jobs: [
+    # Relaod sessions every hour
+    {"10 * * * *",  {VistaStorage.SessionsServer, :restart, []}},
     # Every day at around 5 AM, restart servers
-    {"10 5 * * *",  {VistaStorage.SessionsServer, :restart, []}},
     {"20 5 * * *",  {VistaStorage.FilmsServer,    :restart, []}},
     {"30 5 * * *",  {VistaStorage.CinemasServer,  :restart, []}},
   ]
