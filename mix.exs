@@ -4,7 +4,7 @@ defmodule VistaStorage.MixProject do
   def project do
     [
       app: :vista_storage,
-      version: "0.1.1",
+      version: "0.2.0",
       elixirc_paths: elixirc_paths(Mix.env),
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
@@ -48,9 +48,8 @@ defmodule VistaStorage.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:vista_client, "~> 0.1.2"},
+      {:vista_client, "~> 0.2"},
       {:quantum, "~> 2.3"},
-      {:timex, "~> 3.0"},
     ]
   end
 end
