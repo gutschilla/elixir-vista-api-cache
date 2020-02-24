@@ -19,7 +19,7 @@ defmodule VistaStorageTest do
     # this should invoke VistaStorage.SessionsServer.on_change(…) to call this
     # module's ping_me function
     server.full_reload()
-    assert_receive {:full_reload, ^atom}, 1_000 # reply from mock should be quick
+    assert_receive {:full_reload, ^atom}, 10_000 # reply from mock should be quick
     VistaStorageTest.PidAgent.stop()
   end
 
